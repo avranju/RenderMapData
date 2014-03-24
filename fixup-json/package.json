@@ -1,0 +1,14 @@
+{
+  "name": "fixup_json",
+  "version": "0.0.0",
+  "description": "fixup-json",
+  "main": "app.js",
+  "author": {
+    "name": "rajave",
+    "email": ""
+  },
+  "dependencies": {
+    "q": "^1.0.1",
+    "client-http": "0.0.6"
+  }
+}

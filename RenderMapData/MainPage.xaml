@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="RenderMapData.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RenderMapData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Style="{StaticResource HeaderTextBlockStyle}"
+                   Text="Render Map Data Sample"
+                   VerticalAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Background="#FFEBEBF1"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Margin="0,0,550,30">
+            <Path x:Name="mapPath"
+                  Stroke="{StaticResource ApplicationForegroundThemeBrush}"
+                  StrokeThickness="3"
+                  Stretch="Fill"
+                  RenderTransformOrigin="0.5,0.5">
+                <Path.Data>
+                    <PathGeometry x:Name="mapPathGeometry" />
+                </Path.Data>
+                <Path.RenderTransform>
+                    <ScaleTransform ScaleY="-1" />
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Grid>
+</Page>
